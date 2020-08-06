@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" content="">
+        <title>Game of Life - by Chufeng XIAO</title>
+        <link rel="stylesheet" href="./css/nouislider.min.css">
+        <link rel="stylesheet" href="./css/materialize.min_0.1.css">
+        <link rel="stylesheet" href="./css/my.css">
+        <script src="./js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="./js/nouislider.min.js"></script>
+        <script type="text/javascript" src="./js/wNumb.min.js"></script>
+        <script type="text/javascript" src="./js/d3.min.js"></script>
+        <script type="text/javascript" src="./js/materialize.min_0.1.js"></script>
+        
+    </head>
+
+ <body>
+    <div class="container">
+    <div class="row">
+        <div class="row .left-align"></div>
+            <h5>Game of Life - Qualifying Exam P1</h5>
+            <p>Student Name: Chufeng XIAO</p>
+            <p>School of Creative Media, University of Hong Kong</p>
+            <div class="divider"></div>
+        </div>
+        <div class="row">
+            <div class="col s2">
+                
+                <div class="col s12 ">
+                    <label>
+                        <div class="switch">
+                            <label>
+                            Stop<input id="switch" type="checkbox">
+                            <span class="lever"></span>Start
+                            </label>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="col s12"><a class="waves-effect waves-light btn" id="next">Next</a></div>
+
+                <div class="col s12"><a class="waves-effect waves-light btn" id="clear">Clear</a></div>
+
+                <div class="col s12"><a class="waves-effect waves-light btn" id="random">Random</a></div>
+
+                <div class="col s12"><a class="waves-effect waves-light btn" id="ranSelected">Random&nbsp;Selected</a></div>
+                <div class="col s12">
+                    <span id="speedSpan">Speed</span>
+                    <form action="#">
+                        <p class="range-field">
+                            <div id="speed"></div>
+                          </p>
+                      </form>
+                </div>
+                <div class="col s12">
+                <p class="options">
+                    <label>
+                    <input type="checkbox" class="filled-in" id="dis_grids" checked="checked" />
+                    Grid Lines
+                    </label>
+                  </p>
+            </div>
+            <div class="col s12">
+                <p class="options">
+                    <label>
+                    <input type="checkbox" class="filled-in" id="auto_edit" />
+                    Auto Pasting
+                    </label>
+                </p>
+            </div>
+        </div>
+            <div class="row col s2 pa_set">
+                <p id="set">A Pattern Set</p>
+                
+                <ul class="collapsible" id="col_group" data-collapsible="accordion">
+                    <li>
+                      <div class="collapsible-header">SCM Starting Pattern</div>
+                      <div class="collapsible-body"><img src="./img/SCM_pattern.png"></img></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Boat Pattern</div>
+                        <div class="collapsible-body"><img src="./img/ship.png"></img></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header">Glider Pattern</div>
+                        <div class="collapsible-body"><img src="./img/glider.png"></img></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header">Spaceship Pattern</div>
+                        <div class="collapsible-body"><img src="./img/spaceship.png"></img></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header">Blinker Pattern</div>
+                        <div class="collapsible-body"><img src="./img/blinkers.png"></img></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header">Oscillator Pattern</div>
+                        <div class="collapsible-body"><img src="./img/Oscillator.png"></img></div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header">None Pattern</div>
+                        <div class="collapsible-body"><img src="./img/none_pattern.png"></img></div>
+                      </li>
+                </ul>
+
+            </div>
+
+            <div class="col s8">
+                <div id="grids" ></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<script type="text/javascript" src="./js/patterns.js"></script>
+<script type="text/javascript" src="./js/view.js"></script>
+<script type="text/javascript" src="./js/model.js"></script>
+<script type="text/javascript" src="./js/controller.js"></script>
+</html>
